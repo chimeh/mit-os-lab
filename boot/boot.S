@@ -64,8 +64,8 @@ protcseg:
   movw    %ax, %gs                # -> GS
   movw    %ax, %ss                # -> SS: Stack Segment
   
-  # Set up the stack pointer and call into C.
-  movl    $start, %esp
+  # Set up the stack pointer and call into C.//bootloader被BIOS加载到0x7c00~0x7dff
+  movl    $start, %esp                       //注意x86栈是往下生长的
   call bootmain
 
   # If bootmain returns (it shouldn't), loop.
