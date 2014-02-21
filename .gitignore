@@ -14,3 +14,9 @@
 /lab?-handin.tar.gz
 /lab?/
 /sol?/
+*.*~
+*~
+
+
+.gitignore
+/answer
